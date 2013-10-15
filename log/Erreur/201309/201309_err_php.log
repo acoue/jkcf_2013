@@ -1,0 +1,9 @@
+20/09/2013 20:36:37 Erreur : Action non valide
+20/09/2013 20:47:11 Erreur : Action non valide
+20/09/2013 20:47:16 Erreur : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'online' in where clause is ambiguous
+20/09/2013 20:48:45 Erreur : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'online' in where clause is ambiguous
+20/09/2013 20:49:58 Erreur : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'idnewsletter' in where clause is ambiguous
+20/09/2013 20:50:03 Erreur : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'idnewsletter' in where clause is ambiguous
+20/09/2013 20:50:08 Erreur : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'idnewsletter' in where clause is ambiguous
+24/09/2013 20:33:16 Erreur : SQLSTATE[HY000]: General error
+24/09/2013 20:46:18 Erreur : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Lambert-Arthur' for key 'nom_prenom'

@@ -1,0 +1,196 @@
+html {
+	font-size: 100%; 
+}
+
+body {
+	color: #000000;
+	background: #4D4B45;
+	margin-top: 0; /*supprimer les 8px de blanc au dessus de l'entete*/
+	margin-bottom: 0; /*supprimer les 5px de blanc au dessous du pied*/	
+	font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif; 
+	font-size: .8em;
+	line-height: 1.25; 
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 .5em 0; /* -> 6 */
+}
+h1, h2 {
+	font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+	font-weight: normal; /* -> 7 */
+}
+h1 {
+	font-size: 3em; /* -> 8 */
+	font-style: italic;
+}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 1em;}
+
+/* Listes */
+ul, ol {
+	margin: .75em 0 .75em 24px;
+	padding: 0; /* -> 9 */
+}
+ul {
+	list-style: square;
+}
+li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Paragraphes */
+p {
+	margin: .75em 0;
+}
+li p, blockquote p {
+	margin: .5em 0;
+}
+
+/* Citations */
+blockquote, q {
+	font-size: 1.1em;
+	font-style: italic;
+	font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+}
+blockquote {
+	margin: .75em 0 .75em 24px;
+}
+cite {
+	font-style: italic;
+}
+
+/* Liens */
+a {
+	color: mediumblue;
+	text-decoration: underline;
+}
+a:hover, a:focus {
+	color: crimson;
+}
+a img {
+	border: none; /* -> 10 */
+}
+
+/* Divers éléments de type en-ligne */
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+	color: dimgray;
+}
+
+
+/* --- POSITIONNEMENT --- */
+
+/* Page */
+body {
+	padding: 10px 5px;
+}
+#global {
+	width: 1000px; 
+	margin: 0 auto; 
+}
+
+#centre {
+	width: 100%; 
+	overflow: hidden; 
+}
+
+#bandeau {
+	margin-top: 30px;
+	margin-bottom: 0px;
+	width:100%;
+	height:150px;
+	background-color:#ffffff;/*#308CC9;*/
+	padding: 10px 5px 10px 5px;
+	border-radius: 10px 10px 0 0px;
+background-image: url("logo.png");
+background-repeat:no-repeat;
+background-position:left center;
+text-align: center;
+}
+
+#bandeau p {
+	margin: 40px 0px 10px 300px;
+}
+
+.titre {
+	text-align: center;
+	font-size: 30px;
+	color:#4D4B45;
+}
+
+#messageHaut {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 10px;
+	color:#ffffff;
+}
+
+#contenu {	
+	width:97%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color:#FFFFFF;
+	min-height: 100%;
+height: auto !important;
+height: 100%;
+text-align: justify;
+	padding: 10px 20px;
+}
+#contenu > :first-child {
+	margin-top: 10px;
+}
+#contenu p, #contenu li {
+	line-height: 1.5;
+}
+
+#piedpage {
+	margin-top: 0px;
+	margin-bottom: 30px;
+	width: 100%;
+	height:50px;
+	background-color:#422B1C;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px 5px 10px 5px;
+	border-radius: 0px 0px 10px 10px;
+	}
+
+#pied p {
+	margin: 0 0 0 0;
+}
+
+.copyright {
+	text-align: center;
+	font-size: 11px;
+	color:#FF9103;
+}
+
+.grosTitreParagraphe {
+	background-color:#422B1C;
+	color: #ffffff;	
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	text-align: center;
+	font-size: 16px;
+	font-weight : bold;
+	font-style : italic;
+}
+
+.titreParagraphe {
+/*	background-color:#308CC9;
+	color: #ffffff;	*/
+	color:#308CC9;
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	text-align: justify;
+	font-size: 14px;
+	font-weight : bold;
+	font-style : italic;
+}

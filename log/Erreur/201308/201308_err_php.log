@@ -1,0 +1,18 @@
+04/08/2013 20:29:08 Erreur : Action non valide
+04/08/2013 21:15:35 Erreur : Action non valide
+04/08/2013 21:39:59 Erreur : Action non valide
+05/08/2013 13:36:37 Erreur : SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+05/08/2013 15:01:23 Erreur : SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+05/08/2013 15:03:17 Erreur : SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+05/08/2013 15:07:39 Erreur : SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+05/08/2013 15:09:07 Erreur : SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+05/08/2013 20:00:27 Erreur : SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+05/08/2013 20:02:16 Erreur : SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+05/08/2013 20:53:53 Erreur : Action non valide
+05/08/2013 20:57:05 Erreur : Action non valide
+20/08/2013 13:58:09 Erreur : Répertoire non valide
+29/08/2013 21:38:30 Erreur : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.date_creation' in 'order clause'
+30/08/2013 16:09:53 Erreur : Action non valide
+30/08/2013 16:14:16 Erreur : Action non valide
+30/08/2013 16:14:58 Erreur : Action non valide
+30/08/2013 16:17:29 Erreur : Action non valide
