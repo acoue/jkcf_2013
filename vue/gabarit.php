@@ -119,7 +119,7 @@ if (utilisateurConnected() !== '1') {
 		</aside>
 	</div>
 	<footer>
-		&copy; Judo Kendo Club Fontenay-le-Comte 2011
+		&copy; Judo Kendo Club Fontenay-le-Comte
 	</footer>
 </body>
 </html>

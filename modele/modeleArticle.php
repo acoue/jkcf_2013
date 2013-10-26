@@ -4,7 +4,7 @@ function getArticlesForPage() {
 		$bdd = getBDD();
 		$requete = "SELECT A.idarticle, A.iddiscipline, A.titre, A.texte, A.photo, A.date_creation, A.utilisateur_creation, B.iddiscipline, B.discipline, B.descriptif, B.couleur, A.online					
 					FROM discipline B, article A 
-					WHERE B.iddiscipline = A.iddiscipline and online = 1 ORDER BY A.date_creation desc, A.idarticle desc";
+					WHERE B.iddiscipline = A.iddiscipline and online = 1 ORDER BY A.date_creation desc, A.idarticle desc limit 0, 15";
 		$stmt = $bdd->prepare($requete);
 		$stmt->execute();
 		$result = $stmt->fetchAll();

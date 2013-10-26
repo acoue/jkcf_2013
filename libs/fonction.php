@@ -248,7 +248,7 @@ function cleanText($intext) {
             $path =$dir.'/'.$file;
             if (is_dir ($path)) { //si on tombe sur un sous-repertoire
                 //echo '<p>'.$file.'</p>';
-				echo '<p> |- '.$file.'</p>';
+				echo '<p>'.$file.'</p>';
                 echo '<div style="padding-left: 20px;">';
                 recursive_readdir_simple ($path); 
                echo '</div>';
@@ -256,10 +256,11 @@ function cleanText($intext) {
                 //echo "<li><a href='".$path."' target='_blanck' class='lienNoirLight'>".$file, '</a></li>';
                 $extension = strrchr($path,'.'); // verification de l'extension
                 if ($extension != ".txt")
-					echo "<a href='".$path."' target='_blanck' class='lienNoirLight'> |-- ".$file, '</a><br />';
+					echo "<a href='".$path."' target='_blanck' class='lienNoir'>".$file.'</a>  --------> <a class="lienNoir"  href="index.php?action=suppressionDocument&doc='.$file.'">Supprimer</a><br />';
             }
         }
     }
+    
     closedir ($dh);
  }
 

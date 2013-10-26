@@ -6,7 +6,7 @@
 		<td width="70%"><b>Texte</b></td>  
 	</tr>
 <?php 
-require_once CHEMIN_LIB.'fonction.php';
+require_once CHEMIN_LIB.'fonction.php'; 
 foreach ($ArticlesNewsletter as $ArticleNewsletter) { ?>
 	<tr>
 		<td ><?php echo $ArticleNewsletter['idnewsletter_article'] ?> </td>
@@ -14,5 +14,7 @@ foreach ($ArticlesNewsletter as $ArticleNewsletter) { ?>
 	</tr>
 <?php } ?>
 </table>
+<p align='center' ><input type='button' name='ajouter' value='Ajouter' onclick='window.location.replace("index.php?action=ajoutArticleNewsletterFormulaire&id=<?php echo $idNewsletter?>")' /></p>
+<p align='center' ><input type='button' name='retour' value='Retour' onclick='window.location.replace("index.php?action=gestionNewsletter")' /></p>
 <?php $contenu = ob_get_clean() ?>
 <?php include CHEMIN_VUE.'gabarit.php' ?>

@@ -1,5 +1,23 @@
 <?php
 
+function getNewsletterInfos($id) {
+	try {
+		$bdd = getBDD();
+		$requete = 'select * from newsletter where idnewsletter = :id_newsletter';
+		$stmt = $bdd->prepare($requete);
+		$stmt->bindValue(':id_newsletter', $id);
+		$stmt->execute();
+		if ($result = $stmt->fetch()) {
+			$stmt->closeCursor();
+			return $result;
+		} else  {
+			return false;
+		}
+	} catch (Exception $e) {
+		afficherErreur($e->getMessage());
+	}
+}
+
 function getNewsletter($id) {
 	try {
 		$bdd = getBDD();
@@ -91,6 +109,22 @@ function inscriptionUtilisateurNewsletter($prenom, $nom,$email,$cle) {
 	}
 }
 
+function desinscriptionUtilisateurNewsletter($prenom, $nom,$email,$cle) {
+	try {
+		$bdd = getBDD();
+		$requete = 'delete from newsletter_emailwhere cle = :cle)';
+		$stmt = $bdd->prepare($requete);
+		$stmt->bindValue(':cle', $cle);
+		if ($stmt->execute()) {
+			return true;
+		} else {
+			return false;
+		}
+	} catch (Exception $e) {
+		afficherErreur($e->getMessage());
+	}
+}
+
 function suppressionUtilisateurNewsletter($prenom, $nom,$email) {
 	try {
 		$bdd = getBDD();
@@ -128,6 +162,13 @@ function validateInscriptionUtilisateurNewsletter($cle) {
 function setNewsletter($id, $titre ,$online) {	
 	
 	$bdd = getBDD();
+
+	if($online === "0") {
+		$requete = "UPDATE newsletter SET online = 0";
+		$stmt = $bdd->prepare($requete);
+		$stmt->execute();
+	}
+	
 	$requete = "UPDATE newsletter SET titre = :titre, online = :online WHERE idnewsletter = :id ";
     $stmt = $bdd->prepare($requete); 
 	$stmt->bindValue(':titre', $titre);
@@ -152,6 +193,71 @@ function setArticleNewsletter($id, $titre,$categorie,$texte,$online) {
 	$stmt->bindValue(':online', $online);
 	$stmt->bindValue(':id', $id);
 
+	if ($stmt->execute()) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function addNewsletter($titre ,$online) {
+
+	$bdd = getBDD();
+	if($online === "1") {
+		$requete = "UPDATE newsletter SET online = 0";
+		$stmt = $bdd->prepare($requete);
+		$stmt->execute();
+	}
+	
+	$requete = "INSERT INTO newsletter(titre, online) VALUES(:titre, :online)";
+	$stmt = $bdd->prepare($requete);
+	$stmt->bindValue(':titre', $titre);
+	$stmt->bindValue(':online', $online);
+
+	if ($stmt->execute()) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function addArticleNewsletter($titre,$categorie,$texte,$online,$id) {
+
+	$bdd = getBDD();
+	$requete = "INSERT INTO newsletter_article (titre,categorie,texte,online,idnewsletter) values (:titre, :categorie, :texte, :online, :id) ";
+	$stmt = $bdd->prepare($requete);
+	$stmt->bindValue(':titre', $titre);
+	$stmt->bindValue(':categorie', $categorie);
+	$stmt->bindValue(':texte', $texte);
+	$stmt->bindValue(':online', $online);
+	$stmt->bindValue(':id', $id);
+
+	if ($stmt->execute()) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function getListeEmail() {
+	try {
+		$bdd = getBDD();
+		$requete = 'SELECT * FROM newsletter_email WHERE valide = 1';
+		$stmt = $bdd->prepare($requete);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+		return $result;
+	} catch (Exception $e) {
+		afficherErreur($e->getMessage());
+	}
+}
+
+function flagSendNewsletter($id) {
+
+	$bdd = getBDD();	
+	$requete = "UPDATE newsletter SET envoi = 1 where idnewsletter = :id";
+	$stmt = $bdd->prepare($requete);
+	$stmt->bindValue(':id', $id);
 	if ($stmt->execute()) {
 		return true;
 	} else {

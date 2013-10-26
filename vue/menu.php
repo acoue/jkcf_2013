@@ -34,9 +34,9 @@ if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestion
 if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionContact'>Contact</a></li>";
 if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionCotisation'>Cotisations</a></li>";
 if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionDiscipline'>Discipline</a></li>";
-if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=#'>Document</a></li>";
+if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionDocument'>Document</a></li>";
 if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionHoraire'>Horaires</a></li>";
-if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionPhoto'>Photo</a></li>";
+//if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionPhoto'>Photo</a></li>";
 if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionLien'>Liens</a></li>";
 if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionNewsletter'>Newsletter</a></li>";
 if($_SESSION['isAdmin'] == "1") echo "   		<li><a href='index.php?action=gestionPassword'>Password</a></li>";

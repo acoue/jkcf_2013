@@ -57,6 +57,7 @@ if (! isset($ArticlesNewsletter)) { ?>
 		</tr>
 	</table>
 </form>	
+<p align='center' ><input type='button' name='retour' value='Retour' onclick='window.location.replace("index.php?action=gestionListeArticleNewsletterFormulaire&id=<?php echo $ArticleNewsletter['idnewsletter'] ?>")' /></p>
 <?php } else { ?>
 	<p>==> ERREUR</p>	
 <?php }?>

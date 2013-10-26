@@ -9,17 +9,17 @@ require_once CHEMIN_LIB.'fonction.php';
 	<p class="grosTitreParagraphe">Les activit&eacute;s d&eacute;j&agrave; pass&eacute;es</p>
 <?php 	
 foreach ($newsletter as $news) { 
-	if($news[6] == 1) { ?>	
-		<p class="titreParagraphe"><?php echo traitementAccent($news[5]) ?></p>
-		<p><?php echo traitementAccent($news[7]) ?></p>
+	if($news[7] == 1) { ?>	
+		<p class="titreParagraphe"><?php echo traitementAccent($news[6]) ?></p>
+		<p><?php echo traitementAccent($news[8]) ?></p>
 <?php }
 } ?>	
 	<p class="grosTitreParagraphe">Les dates &agrave; retenir</p>
 <?php 	
 foreach ($newsletter as $news) { 
-	if($news[6] == 2) { ?>	
-		<p class="titreParagraphe"><?php echo traitementAccent($news[5]) ?></p>
-		<p><?php echo traitementAccent($news[7]) ?></p>
+	if($news[7] == 2) { ?>	
+		<p class="titreParagraphe"><?php echo traitementAccent($news[6]) ?></p>
+		<p><?php echo traitementAccent($news[8]) ?></p>
 <?php }
 } ?>
 	

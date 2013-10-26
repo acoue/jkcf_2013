@@ -13,6 +13,7 @@ require CHEMIN_CONTROLEUR.'actionsPhoto.php';
 require CHEMIN_CONTROLEUR.'actionsContact.php';
 require CHEMIN_CONTROLEUR.'actionsResultat.php';
 require CHEMIN_CONTROLEUR.'actionsNewsletter.php';
+require CHEMIN_CONTROLEUR.'actionsDocument.php';
 
 try {
     if (isset($_GET['action'])) {
@@ -136,18 +137,38 @@ try {
         }
         else if ($_GET['action'] == 'gestionPhoto') afficherPagePhoto(); // A MODIFIER
         
-         else if ($_GET['action'] == 'afficherNewsletter') afficherNewsletterOnline();
+        else if ($_GET['action'] == 'afficherNewsletter') afficherNewsletterOnline();
         else if ($_GET['action'] == 'afficherListeNewsletter') afficherListeNewsletters();
         else if ($_GET['action'] == 'detailNewsletter') afficherNewsletter($_GET['id']);
         else if ($_GET['action'] == 'inscrireNewsletterFormulaire') afficherInscriptionNewsletters();
         else if ($_GET['action'] == 'inscrireNewsletter') inscrireNewsletter();        
         else if ($_GET['action'] == 'validateUserNewsletter') validateUserNewsletter($_GET['cle']);
+        else if ($_GET['action'] == 'desinscrireNewsletter') desinscrireNewsletter($_GET['cle']);
         else if ($_GET['action'] == 'gestionNewsletter') gestionListeNewsletters();
         else if ($_GET['action'] == 'modificationNewsletterFormulaire')  modificationNewsletterFormulaire($_GET['id']);
         else if ($_GET['action'] == 'modificationNewsletter')  modificationNewsletter();
         else if ($_GET['action'] == 'gestionListeArticleNewsletterFormulaire')  listeArticleNewsletteFormulaire($_GET['id']);
         else if ($_GET['action'] == 'modificationArticleNewsletterFormulaire')  modificationArticleNewsletterFormulaire($_GET['id']);
-        else if ($_GET['action'] == 'modificationArticleNewsletter')  modificationArticleNewsletter();
+        else if ($_GET['action'] == 'modificationArticleNewsletter')  modificationArticleNewsletter();        
+        else if ($_GET['action'] == 'ajoutNewsletterFormulaire')  ajoutNewsletterFormulaire();
+        else if ($_GET['action'] == 'ajoutNewsletter')  ajoutNewsletter();        
+        else if ($_GET['action'] == 'ajoutArticleNewsletterFormulaire')  ajoutArticleNewsletterFormulaire($_GET['id']);
+        else if ($_GET['action'] == 'ajoutArticleNewsletter')  ajoutArticleNewsletter();
+        
+        else if ($_GET['action'] == 'envoyerNewsletter')  envoyerNewsletter($_GET['id']);
+        
+        
+        else if ($_GET['action'] == 'gestionDocument') gestionDocument();        
+        else if ($_GET['action'] == 'ajoutDocument') ajoutDocumentFormulaire();        
+        else if ($_GET['action'] == 'suppressionDocument') {
+        	if (isset($_GET['doc'])) {
+        		$doc = $_GET['doc'];
+        		if ($doc != "")
+        			suppressionDocument($doc);
+        		else throw new Exception("Répertoire non valide");
+        	} else throw new Exception("Répertoire non defini");
+        }
+        else if ($_GET['action'] == 'ajouterDocument') ajoutDocument();        
         
     	else throw new Exception("Action non valide");
     } else {

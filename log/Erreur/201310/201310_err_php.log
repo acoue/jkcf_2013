@@ -9,3 +9,6 @@
 10/10/2013 21:11:07 Erreur : Action non valide
 10/10/2013 21:11:58 Erreur : Action non valide
 10/10/2013 21:15:45 Erreur : Action non valide
+19/10/2013 15:39:15 Erreur : Action non valide
+19/10/2013 16:16:35 Erreur : Action non valide
+19/10/2013 16:37:09 Erreur : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VLALUES('Test  octobre', '1')' at line 1
